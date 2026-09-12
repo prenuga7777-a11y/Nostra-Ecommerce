@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nostra - Collections</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    
+
+       <!-- Navbar -->
+
+<nav>
+
+
+<h1>Nostra</h1>
+
+<div class="nav-links" id="navLinks">
+
+    <a href="index.html">Home</a>
+
+    <a href="collections.html">Collections</a>
+
+    <a href="contact.html">Contact</a>
+
+     <a href="cart.html">
+            
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount">0</span>
+        </a>
+
+</div>
+
+<button class="menu-btn" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+
+</nav>
+
+
+    <!-- Collections-->
+
+    <section class="collection-container">
+
+
+        <!-- Filter Sidebar -->
+
+        <aside class="filter-sidebar">
+
+            <h3>Filter</h3>
+
+            <h4>Category</h4>
+
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="category"
+                    value="all"
+                    checked
+                >
+
+                All
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="category"
+                    value="men"
+                >
+
+                Men
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="category"
+                    value="women"
+                >
+
+                Women
+
+            </label>
+
+        </aside>
+
+
+
+        <!-- Products Section -->
+
+        <div class="products-section">
+
+
+            <!-- Search -->
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+
+
+
+            <!-- Product Cards -->
+
+            <div
+                class="collection-products"
+                id="productContainer"
+            >
+
+
+                <!-- Product 1 -->
+
+                <div
+                    class="collection-product"
+                    data-category="men"
+                >
+
+                    <img
+                        src="./images/product1.webp"
+                        alt="Classic T-Shirt"
+                    >
+
+                    <h3>Classic T-Shirt</h3>
+
+                    <p>₹799</p>
+
+                    <button
+                        onclick="addToCart('Classic T-Shirt', 799)"
+                    >
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+
+                <!-- Product 2 -->
+
+                <div
+                    class="collection-product"
+                    data-category="men"
+                >
+
+                    <img
+                        src="./images/product2.jpeg"
+                        alt="Casual Shirt"
+                    >
+
+                    <h3>Casual Shirt</h3>
+
+                    <p>₹999</p>
+
+                    <button
+                        onclick="addToCart('Casual Shirt', 999)"
+                    >
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+
+                <!-- Product 3 -->
+
+                <div
+                    class="collection-product"
+                    data-category="women"
+                >
+
+                    <img
+                        src="./images/product3.jpeg"
+                        alt="Denim Jacket"
+                    >
+
+                    <h3>Denim Jacket</h3>
+
+                    <p>₹1,499</p>
+
+                    <button
+                        onclick="addToCart('Denim Jacket', 1499)"
+                    >
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+
+                <!-- Product 4 -->
+
+                <div
+                    class="collection-product"
+                    data-category="women"
+                >
+
+                    <img
+                        src="./images/product4.jpg"
+                        alt="Summer Dress"
+                    >
+
+                    <h3>Summer Dress</h3>
+
+                    <p>₹1,299</p>
+
+                    <button
+                        onclick="addToCart('Summer Dress', 1299)"
+                    >
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer-->
+
+    <footer>
+
+        <h2>Nostra</h2>
+
+        <p>
+            Discover the latest fashion
+            and find your style.
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="collections.html">
+                Collections
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+
+            © 2026 Nostra. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
+

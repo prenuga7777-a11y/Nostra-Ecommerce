@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Nostra - Ecommerce</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+
+<!-- Navbar -->
+
+<nav>
+
+    <h1>Nostra</h1>
+
+    <div class="nav-links" id="navLinks">
+
+        <a href="index.html">Home</a>
+
+        <a href="collections.html">Collections</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="cart.html">
+            
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount">0</span>
+        </a>
+
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+</nav>
+
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h2>New Arrivals</h2>
+
+        <h1>Find Your Style</h1>
+
+        <p>
+            Discover our latest fashion collection
+        </p>
+
+        <button onclick="goToCollections()">
+            Shop Now
+        </button>
+
+    </div>
+
+
+    <!-- Hero Slider -->
+
+    <div class="slider">
+
+        <!-- Hero Image -->
+
+        <img id="heroImage"
+            src="./images/hero.jpg"
+            alt="Fashion">
+
+
+        <!-- Previous Button -->
+
+        <button class="prev" onclick="previousSlide()">
+            ❮
+        </button>
+
+
+        <!-- Next Button -->
+
+        <button class="next" onclick="nextSlide()">
+            ❯
+        </button>
+
+
+        <!-- Slider Dots -->
+
+        <div class="dots">
+
+            <span class="dot active"
+                onclick="showSlide(0)">
+            </span>
+
+            <span class="dot"
+                onclick="showSlide(1)">
+            </span>
+
+            <span class="dot"
+                onclick="showSlide(2)">
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Why Shop With Us -->
+
+<section class="why-shop">
+
+    <h2>Why Shop With Us?</h2>
+
+
+    <div class="features">
+
+
+        <!-- Free Shipping -->
+
+        <div class="feature">
+
+            <h3>
+                <i class="fa-solid fa-truck"></i>
+                Free Shipping
+            </h3>
+
+            <p>
+                Free shipping on all orders.
+            </p>
+
+        </div>
+
+
+        <!-- Best Prices -->
+
+        <div class="feature">
+
+            <h3>
+                <i class="fa-solid fa-award"></i>
+                Best Prices
+            </h3>
+
+            <p>
+                Quality products at affordable prices.
+            </p>
+
+        </div>
+
+
+        <!-- Quality Products -->
+
+        <div class="feature">
+
+            <h3>
+                <i class="fa-solid fa-star"></i>
+                Quality Products
+            </h3>
+
+            <p>
+                We provide high-quality fashion products.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Latest Arrivals -->
+
+<section class="latest">
+
+    <h2>Latest Arrivals</h2>
+
+
+    <div class="products">
+
+
+        <!-- Product 1 -->
+
+        <div class="product">
+
+            <img src="./images/product1.webp"
+                alt="Classic T-Shirt">
+
+            <h3>
+                Classic T-Shirt
+            </h3>
+
+            <p>
+                ₹799
+            </p>
+
+            <button
+                onclick="addToCart('Classic T-Shirt', 799, './images/product1.webp')">
+
+                Add to Cart
+
+            </button>
+
+        </div>
+
+
+        <!-- Product 2 -->
+
+        <div class="product">
+
+            <img src="./images/product2.jpeg"
+                alt="Casual Shirt">
+
+            <h3>
+                Casual Shirt
+            </h3>
+
+            <p>
+                ₹999
+            </p>
+
+            <button
+                onclick="addToCart('Casual Shirt', 999, './images/product2.jpeg')">
+
+                Add to Cart
+
+            </button>
+
+        </div>
+
+
+        <!-- Product 3 -->
+
+        <div class="product">
+
+            <img src="./images/product3.jpeg"
+                alt="Denim Jacket">
+
+            <h3>
+                Denim Jacket
+            </h3>
+
+            <p>
+                ₹1,499
+            </p>
+
+            <button
+                onclick="addToCart('Denim Jacket', 1499, './images/product3.jpeg')">
+
+                Add to Cart
+
+            </button>
+
+        </div>
+
+
+        <!-- Product 4 -->
+
+        <div class="product">
+
+            <img src="./images/product4.jpg"
+                alt="Summer Dress">
+
+            <h3>
+                Summer Dress
+            </h3>
+
+            <p>
+                ₹1,299
+            </p>
+
+            <button
+                onclick="addToCart('Summer Dress', 1299, './images/product4.jpg')">
+
+                Add to Cart
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <h2>Nostra</h2>
+
+    <p>
+        Discover the latest fashion and find your style.
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="collections.html">
+            Collections
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+
+        © 2026 Nostra. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

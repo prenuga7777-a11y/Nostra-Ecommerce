@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra-Ecommerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+<nav>
+
+
+<h1>Nostra</h1>
+
+<div class="nav-links" id="navLinks">
+
+    <a href="index.html">Home</a>
+
+    <a href="collections.html">Collections</a>
+
+    <a href="contact.html">Contact</a>
+
+    <a href="cart.html">
+         <i class="fa-sharp fa-solid fa-cart-shopping"></i>:
+        <span id="cartCount">0</span>
+    </a>
+
+</div>
+
+<button class="menu-btn" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+
+</nav>
+
+    <section class="cart">
+
+        <h2>Your Cart  <i class="fa-sharp fa-solid fa-cart-shopping" style="color: rgb(10, 10, 10);"></i></h2>
+
+        
+
+        <div id="cartItems"></div>
+
+        <p id="cartTotal">Total: ₹0</p>
+
+        <button id="clearCartBtn" onclick="clearCart()">
+            Clear Cart
+        </button>
+
+        <button id="orderBtn" onclick="order()">
+            Order Now
+        </button>
+
+    </section>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
